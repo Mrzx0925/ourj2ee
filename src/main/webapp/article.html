@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="ax-vertical-centered">
+<head>
+<meta charset="UTF-8">
+<title>企业网站</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/bootstrap-admin-theme.css">
+<link rel="stylesheet" href="css/bootstrap-admin-theme.css">
+<script src="jQuery/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/bootstrap-dropdown.min.js"></script>
+<script src="js/index/article.js"></script>
+</head>
+
+
+
+
+
+<body class="bootstrap-admin-with-small-navbar">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">企业网站 </a>
+			</div>
+
+			<ul class="nav navbar-nav">
+				<li><a href="index.html">首页</a></li>
+				<li><a href="notice.html">企业公告</a></li>
+				<li class="active"><a href="article.html">企业新闻</a></li>
+				<li><a href="product.html">企业产品</a></li>
+				<li><a href="contact.html">联系我们</a></li>
+			</ul>
+
+
+		</div>
+	</nav>
+
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="page-header">
+				<h1>
+					企业新闻
+					<div class="pull-right">
+						<form id="articleform" class="navbar-form navbar-left" role="search">
+							<div class="form-group">
+								<input type="text" class="form-control"
+									placeholder="搜索企业新闻的相关信息"  name="atitle">
+							</div>
+							<button type="button" class="btn btn-default" onclick="search()">搜索</button>
+						</form>
+					</div>
+				</h1>	
+			</div>
+
+
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">企业新闻</h3>
+					</div>	
+					<table id="table" class="table">
+						<thead>
+							<th>新闻标题</th>
+							<th>时间</th>
+							<th>操作</th>
+							<!---在此插入信息-->
+						</thead>
+						
+
+					</table>
+				</div>
+
+
+
+
+
+			
+
+
+			</div>
+
+		</div>
+	</div>
+
+
+	<!--------------------------------------查看的模糊框------------------------>
+	<form class="form-horizontal">
+		<!--保证样式水平不混乱-->
+		<!-- 模态框（Modal） -->
+		<div class="modal fade" id="findModal" tabindex="-1" role="dialog"
+			aria-labelledby="findModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+							aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="findModalLabel">查看新闻详情</h4>
+					</div>
+					<div class="modal-body">
+
+						<!---------------------表单-------------------->
+						<div class="form-group">
+							<label for="firstname" class="col-sm-2 control-label">新闻标题</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="findTitle"
+									readonly="readonly">
+
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="firstname" class="col-sm-2 control-label">新闻内容</label>
+							<div class="col-sm-9">
+								<textarea class="form-control" id="findContent" rows="20"
+									readonly="readonly" style="width: 642px; height: 500px;"></textarea>
+
+							</div>
+						</div>
+						<!---------------------表单-------------------->
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+						</button>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal -->
+		</div>
+
+	</form>
+	<!--------------------------------------查看的模糊框------------------------>
+
+
+
+
+</body>
+</html>

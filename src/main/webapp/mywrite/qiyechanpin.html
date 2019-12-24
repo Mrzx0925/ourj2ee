@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="ax-vertical-centered">
+
+<head>
+<meta charset="UTF-8">
+<title>企业网站</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/bootstrap-admin-theme.css">
+<link rel="stylesheet" href="css/bootstrap-admin-theme.css">
+
+<script src="jQuery/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/bootstrap-dropdown.min.js"></script>
+<script src="js/chanpin.js"></script>
+</head>
+
+
+
+
+
+<body class="bootstrap-admin-with-small-navbar">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">企业网站 </a>
+			</div>
+
+			<ul class="nav navbar-nav">
+				<li><a href="index.html">首页</a></li>
+				<li><a href="gonggao.html">企业公告</a></li>
+				<li><a href="xinwen.html">企业新闻</a></li>
+				<li class="active"><a href="qiyechanpin.html">企业产品</a></li>
+				<li><a href="lianxi.html">联系我们</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="page-header">
+				<h1>
+					企业产品
+					<div class="pull-right">
+						<form  id="pform" class="navbar-form navbar-left" role="search">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="搜索企业产品名称"
+									name="pname">
+							</div>
+							<button type="button" class="btn btn-default" onclick="search()">搜索</button>
+						</form>
+					</div>
+				</h1>
+			</div>
+
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">企业产品介绍</h3>
+					</div>
+					<table id="table" class="table">
+						<thead>
+							<th width="200">图片</th>
+							<th width="200">产品名称</th>
+							<th>产品简介</th>
+							<!---在此插入信息-->
+						</thead>
+						
+
+					</table>
+				</div>
+
+
+
+
+
+			</div>
+
+		</div>
+	</div>
+
+
+</body>
+</html>

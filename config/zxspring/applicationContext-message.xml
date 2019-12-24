@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd"
+         default-autowire="byName">
+       
+       
+       <bean id="messagebean" class="com.zx.action.MessageAction">
+       		<property name="messageService" ref="messageService"></property>
+			
+       </bean>
+       
+        <bean id="messageService" class="com.zx.service.MessageService">
+       		<property name="messageDao" ref="messageDao"></property>
+       		<property name="message" ref="Message"></property>
+       </bean>
+ 
+       <bean id="Message" class="com.entity.Message">
+       	
+       </bean>
+           
+       <bean id="messageDao" class="com.zx.dao.MessageDao">
+       		<property name="sessionFactory" ref="sf"></property>
+       </bean>
+ 	
+ </beans>

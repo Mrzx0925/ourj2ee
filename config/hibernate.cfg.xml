@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<hibernate-configuration>
+	<session-factory>
+	    <!--<prop key="current_session_context_class">thread</prop>-->
+        <!--  数据库方言  -->
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <!--  显示sql语句  -->
+        <property name="show_sql">true</property>
+        <!--  格式化sql语句  -->
+        <property name="format_sql">true</property>
+        <!--数据库连接信息-->
+
+
+		<mapping resource="com/entity/Article.hbm.xml" />
+		<mapping resource="com/entity/CompanyInfo.hbm.xml" />
+		<mapping resource="com/entity/Message.hbm.xml" />
+		<mapping resource="com/entity/Notice.hbm.xml" />
+		<mapping resource="com/entity/ProductInfo.hbm.xml" />
+		<mapping resource="com/entity/Admin.hbm.xml" />
+		<mapping resource="com/entity/User.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>
